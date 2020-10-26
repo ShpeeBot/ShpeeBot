@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <%- include('blocks/head') %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <%- include('blocks/sidebar') %>
+      <div class="main-panel">
+        <div
+          class="header-image"
+          style="background-image: url(https://cdn.dankzone.vercel.app/archive/dankzone/icons/raw/blur-gradient-vibrant-digital-art.jpg);"
+        ></div>
+        <!-- Navbar -->
+        <nav class="navbar navbar-dark navbar-expand sticky-top">
+          <p class="navbar-brand h4">Dashboard</p>
+          <%- include('blocks/navbar') %>
+        </nav>
+        <div class="content">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="card widget">
+                <div class="card-body text-center">
+                  <ion-icon name="time-outline" size="large" class="text-success"></ion-icon>
+                  <div class="h2 font-weight-bold"><%= stats.uptime %></div>
+                  <p class="text-muted">Uptime</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="card widget">
+                <div class="card-body text-center">
+                  <ion-icon name="barcode-outline" size="large" class="text-info"></ion-icon>
+                  <div class="h2 font-weight-bold">
+                    <%= stats.memoryUsage %> MB
+                  </div>
+                  <p class="text-muted">Memory Usage</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="card widget">
+                <div class="card-body text-center">
+                  <ion-icon name="people" size="large"></ion-icon>
+                  <div class="h2 font-weight-bold"><%= stats.members %></div>
+                  <p class="text-muted">Members</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="card widget">
+                <div class="card-body text-center">
+                  <ion-icon name="chatbox" size="large"></ion-icon>
+                  <div class="h2 font-weight-bold"><%= stats.servers %></div>
+                  <p class="text-muted">Guilds</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-8 col-12">
+              <div class="card bg-secondary text-white">
+                <!-- TODO: fix card radius -->
+                <div class="card-header rounded-top bg-secondary p-4">
+                  <h3 class="text-white">Response Time</h3>
+                  <p class="text-muted m-0" style="font-size:14px;">
+                    Is bot getting slow? Check here to see it's respone time.
+                  </p>
+                </div>
+                <canvas class="rounded" id="canvas" height="300px"></canvas>
+              </div>
+            </div>
+            <div class="col-lg-4 col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="m-0">Command Usage</h3>
+                  <p class="text-muted m-0" style="font-size:14px;">
+                    The most used commands put in a pie chart for your viewing
+                    pleasure.
+                  </p>
+                </div>
+                <div class="card-body">
+                  <canvas id="pie-chart" height="300"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer -->
+      <%- include('blocks/footer') %>
+      </div>
+    </div>
+  </body>
+</html>

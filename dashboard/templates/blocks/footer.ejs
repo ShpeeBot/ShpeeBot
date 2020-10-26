@@ -1,0 +1,50 @@
+<div class="row no-gutters align-items-center justify-content-lg-between m-3">
+  <div class="col-lg-6">
+    <div class="copyright text-center text-lg-left text-muted">
+      ©
+      <script type="text/javascript">
+        document.write(new Date().getFullYear());
+      </script>
+      LeoDT | Design by UICardio
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="nav nav-footer justify-content-center justify-content-lg-end">
+      <a class="ml-3" target="_blank" href="/legal">
+        Legal
+      </a>
+      <a class="ml-3" target="_blank" href="https://github.com/LeoDoesThings/ShpeeBot">
+        GitHub
+      </a>
+      <a class="ml-3" target="_blank" href="https://github.com/LeoDoesThings">
+        Contact
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="copyright text-center text-lg-right text-muted mr-3">
+  Node v<%= stats.dVersion %> | discord.js <%= stats.nVersion %> | ShpeeBot v<%= stats.bVersion %>
+</div>
+
+<!-- Include scripts required for bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js"></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+  crossorigin="anonymous"
+></script>
+<!-- Include icons from Ion Icons -->
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<!-- Include ChartJs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<!-- Use a better scrollbar -->
+<script>
+  Array.prototype.forEach.call(
+    document.querySelectorAll(".sidebar", ".mainpanel"),
+    el => new SimpleBar()
+  );
+</script>
+<!-- Include the main script -->
+<script src="/public/js/scripts.js"></script>
