@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('blocks/landing-head', {bot: bot, user: user, auth: auth}) %>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <%- include('blocks/landing-header') %>
+  <div class="site-section bg-light" id="legal-section">
+    <div class="container">
+      <div class="jumbotron text-black">
+        <h1 class="text-center">Legal</h3>
+          <div class="container text-center">
+            <div id="tableofcontents" style="padding: 4em 0;">
+              <h2>
+                Table of Contents
+              </h2>
+              <h5>
+                <a href="#privacy">Privacy Policy</a><br>
+                <a href="#terms">Terms of Service</a><br>
+              </h5>
+            </div>
+            <div id="privacy">
+              <%- privacy %>
+            </div>
+            <div id="terms">
+              <%- terms %>
+            </div>
+            <div id="consent">
+              <b>
+                <h4>By using this website, you agree to the above Terms of Service and Privacy Policy</h4>
+              </b>
+              <h6>
+                <i>
+                  These legal notices were created for use on this website on the date: 13 November 2018 and was
+                  last edited on the date: <%= edited %>
+                </i>
+              </h6>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+  <%- include('blocks/landing-footer') %>

@@ -1,0 +1,55 @@
+<div class="sidebar p-3">
+  <h3 class="text-center">
+    <%= bot.user.username %>
+  </h3>
+  <hr>
+  <ul class="nav nav-pills ">
+    <li class="nav-item ">
+      <a class="nav-link shadow-sm" href="/dashboard">
+        <ion-icon name="bar-chart"></ion-icon> Dashboard
+      </a>
+    </li>
+    <li class="nav-item">
+      <br>
+      Manage Servers
+    </li>
+    <ul class="list-unstyled">
+      <% bot.guilds.forEach(guild => { %>
+      <li class="media" style="padding: 10px;">
+        <% if (guild.icon) { %>
+        <img 
+          class="d-flex mr-3 rounded-circle"
+          src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon %>.jpg"
+          style="width: 50px;"
+          alt="Guild Image">
+        <% } else { %>
+        <img 
+          class="d-flex mr-3 rounded-circle" src="https://cdn.dankzone.vercel.app/img/avatar-default.png"
+          style="width: 50px;"
+          alt="Guild Image">
+        <% } %>
+        <div class="media-body">
+          <h6 class="mt-0 mb-1"><%= guild.name %></h5>
+            <%
+              let href, text;
+              let enabled;
+              if(bot.guilds.get(guild.id)) {
+                href = "/manage/" + guild.id;
+                text = "Manage";
+                enabled = true;
+              } else {
+                href = `/add/${guild.id}`;
+                text = "Invite Bot";
+                enabled = user.id === bot.config.ownerID || bot.appInfo.botPublic;
+              }
+              %>
+            <a class="btn btn-primary btn-sm<% if(!enabled) { %> disabled<% } %>" role="button" href="<%= href %>">
+              <%= text %>
+              <i class="right chevron icon"></i>
+            </a>
+        </div>
+      </li>
+      <% }); %>
+    </ul>
+  </ul>
+</div>

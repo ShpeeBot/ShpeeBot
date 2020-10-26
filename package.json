@@ -1,0 +1,46 @@
+{
+  "name": "shpeebot",
+  "version": "9.0.0",
+  "description": "A multipurpose Discord bot written in discord.js",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShpeeBot/ShpeeBot"
+  },
+  "author": "LeoDoesThings <leo@leodt.xyz> (http://leodt.xyz)",
+  "license": "BSD-4-Clause",
+  "bugs": {
+    "url": "https://github.com/ShpeeBot/ShpeeBot/issues"
+  },
+  "homepage": "https://shpee.leodt.xyz",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "@discordjs/opus": "^0.3.2",
+    "distube": "^2.6.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "ejs": "^3.1.5",
+    "better-sqlite3": "^7.1.0",
+    "chalk": "^4.1.0",
+    "enmap": "^5.7.3",
+    "inquirer": "^7.3.3",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
+    "url": "^0.11.0",
+    "path": "^0.12.7",
+    "passport": "^0.4.1",
+    "passport-discord": "^0.1.4",
+    "marked": "^1.2.0",
+    "morgan": "^1.10.0",
+    "isgd": "^1.1.3",
+    "node-bypasser": "^1.8.0",
+    "util-deprecate": "^1.0.2"
+  }
+}

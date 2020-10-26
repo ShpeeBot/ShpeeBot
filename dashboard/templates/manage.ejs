@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <%- include('blocks/head') %>
+</head>
+
+<body>
+  <div class="wrapper">
+    <%- include('blocks/sidebar') %>
+    <div class="main-panel">
+      <div class="header-image" style="
+            background-image: url(https://cdn.dankzone.vercel.app/archive/dankzone/icons/raw/blur-gradient-vibrant-digital-art.jpg);
+          "></div>
+      <!-- Navbar -->
+      <nav class="navbar navbar-dark navbar-expand sticky-top">
+        <p class="navbar-brand h4">Server Preferences</p>
+        <%- include('blocks/navbar') %>
+      </nav>
+      <div class="content">
+        <div class="row">
+          <div class="col-lg-5 col-12">
+            <div class="card">
+              <div class="card-body text-center">
+                <h2>
+                  <% if (guild.iconURL) { %><img class="img-fluid rounded-circle" style="margin-bottom: 1rem;"
+                    src="<%= guild.iconURL %>" /><br />
+                  <% } %><%= guild.name %>
+                </h2>
+                <div class="row">
+                  <div class="col-sm">
+                    <ion-icon name="person"></ion-icon>
+                    Owner: <%= `${guild.owner.user.tag}` %>
+                  </div>
+                  <div class="col-sm">
+                    <ion-icon name="people"></ion-icon>
+                    <%= `${guild.memberCount}` %> Members (
+                    <%= `${guild.members.filter(m=>m.user.bot).size}` %>
+                    Bots )
+                  </div>
+
+                  <div class="col-sm">
+                    Channels :
+                    <b>#</b>
+                    <%=
+                        `${guild.channels.filter(c=>c.type==='text').size}`%>
+                    <ion-icon name="mic"></ion-icon>
+                    <%=
+                        `${guild.channels.filter(c=>c.type==='voice').size}`%>
+                  </div>
+                </div>
+                <div class="col-sm-8 mx-auto" style="margin-top: 15px;">
+                  <p>
+                    <a class="btn btn-danger btn-lg" data-toggle="modal" data-target="#serverLeaveModal"
+                      role="button"><ion-icon name="log-out-sharp"></ion-icon> Leave</a>
+                    <a class="btn btn-info btn-lg" data-toggle="modal" data-target="#settingsResetModal"
+                      role="button"><ion-icon name="settings-sharp"></ion-icon> Reset</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <di class="col-lg-7 col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3>Settings</h3>
+              </div>
+              <div class="card-body">
+                <form method="post">
+                  <% const settings = bot.settings.get(guild.id); %> <% for
+                    (const key in settings) { %>
+                  <div class="form-group">
+                    <label for="<%= key %>"><%= key %></label>
+                    <input type="text" class="form-control" id="<%= key %>" name="<%= key %>"
+                      placeholder="Enter <%= key %>" value="<%= settings[key] %>" />
+                  </div>
+                  <% } %>
+                  <button type="submit" class="btn btn-primary">
+                    <ion-icon name="save-sharp" style="margin-top: 2px;"></ion-icon> Save
+                  </button>
+                </form>
+              </div>
+            </div>
+          </di>
+        </div>
+      </div>
+      <%- include('blocks/footer') %>
+    </div>
+  </div>
+</body>
+
+</html>
