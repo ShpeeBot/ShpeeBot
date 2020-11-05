@@ -1,9 +1,10 @@
 # Shpee Discord Bot
 
 <p>
-  <a href="https://www.codefactor.io/repository/github/shpeebot/shpeebot"><img src="https://www.codefactor.io/repository/github/shpeebot/shpeebot/badge" alt="CodeFactor" /></a>
-  <img alt="GitHub" src="https://img.shields.io/github/license/ShpeeBot/ShpeeBot">
-  <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/ShpeeBot/ShpeeBot?include_prereleases">
+  <a href="https://www.codefactor.io/repository/github/shpeebot/shpeebot"><img src="https://img.shields.io/codefactor/grade/github/ShpeeBot/ShpeeBot?logo=codefactor&style=for-the-badge" alt="CodeFactor Quality Grade" /></a>
+  <a href="https://github.com/ShpeeBot/ShpeeBot/blob/main/LICENSE.md"><img alt="GitHub" src="https://img.shields.io/github/license/ShpeeBot/ShpeeBot?color=green&style=for-the-badge"></a>
+  <a href="https://github.com/ShpeeBot/ShpeeBot/releases/latest"><img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/ShpeeBot/ShpeeBot?include_prereleases&logo=github&style=for-the-badge"></a>
+  <a href="https://glitch.com"><img alt="Made with Glitch" src="https://img.shields.io/badge/Made%20with-Glitch-pink?style=for-the-badge?logo=glitch></a>
 </p>
 
 ---
