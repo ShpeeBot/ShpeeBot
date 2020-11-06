@@ -1,10 +1,11 @@
-# Shpee Discord Bot
+![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/ShpeeBot/ShpeeBot/main?logo=codefactor&style=for-the-badge)
+![GitHub License](https://img.shields.io/github/license/ShpeeBot/ShpeeBot?color=green&logo=github&style=for-the-badge)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/ShpeeBot/ShpeeBot?include_prereleases&logo=github&style=for-the-badge)
 
-<p>
-  <a href="https://www.codefactor.io/repository/github/shpeebot/shpeebot"><img src="https://img.shields.io/codefactor/grade/github/ShpeeBot/ShpeeBot?logo=codefactor&style=for-the-badge" alt="CodeFactor Quality Grade" /></a>
-  <a href="https://github.com/ShpeeBot/ShpeeBot/blob/main/LICENSE.md"><img alt="GitHub" src="https://img.shields.io/github/license/ShpeeBot/ShpeeBot?color=green&style=for-the-badge"></a>
-  <a href="https://github.com/ShpeeBot/ShpeeBot/releases/latest"><img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/ShpeeBot/ShpeeBot?include_prereleases&logo=github&style=for-the-badge"></a>
-</p>
+<img align="right" alt="ShpeeBot logo" width="100" src="https://assets.leodt.xyz/img/spycrab.jpg">
+
+# ShpeeBot
+The multi-purpose Discord bot.
 
 ---
 
@@ -12,7 +13,7 @@
 Lots of things don't work and I have been getting less time to work on them.  
   
 I will be posting development updates at <https://medium.com/shpeebot>  
-See my notes for the full development status: <https://usejournal.com/app/space/journal:space:project/4820419a-9d1c-4dee-a153-224bffc8d5ed>  
+See my notes for the full development status: <https://doc.clickup.com/p/h/6kdt2-9/10fbe3e33b93f51/6kdt2-9>  
 
 ***Issue reports and pull requests will be highly appreciated.***
 
